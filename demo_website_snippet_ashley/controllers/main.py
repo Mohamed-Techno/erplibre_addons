@@ -1,6 +1,7 @@
 from odoo import http
 from odoo.http import request
 
+
 class DemoWebsiteSnippetController(http.Controller):
     @http.route(
         ["/demo_website_snippet_ashley/aliments"],
@@ -15,10 +16,5 @@ class DemoWebsiteSnippetController(http.Controller):
         lst_fruit = []
         data = {"fruit": lst_fruit}
         for result_id in result_ids:
-                lst_fruit.append(result_id.name)
+            lst_fruit.append(result_id.name)
         return data
-
-
-
-
-

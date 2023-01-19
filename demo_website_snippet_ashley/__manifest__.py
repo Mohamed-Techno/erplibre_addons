@@ -11,11 +11,11 @@
     "application": True,
     "depends": ["website"],
     "data": [
-            "security/ir.model.access.csv",
-            "views/snippets.xml",
-            "views/demo_model_internal.xml",
-            "views/menu.xml",
-            ],
+        "security/ir.model.access.csv",
+        "views/snippets.xml",
+        "views/demo_model_internal.xml",
+        "views/menu.xml",
+    ],
     "installable": True,
-    "application" : True,
+    "application": True,
 }
