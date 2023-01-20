@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl). -->
+<odoo>
+    <!-- Snippets -->
+    <template id="s_demo_website_snippet_defi" name="Demo Website Snippet">
+        <section class="o_demo_website_snippet_defi">
+            <div class="container">
+                <div class="text-center demo_website_snippet_defi_value">Hello</div>
+                <form
+                action="/demo_website_snippet_defi/add"
+                method="POST"
+                class="form-horizontal mt32"
+                enctype="multipart/form-data"
+            >
+                    <div class="form-group">
+                    <label class="col-md-3 col-sm-4 control-label" for="ypos">Item</label>
+                    <div class="col-md-7 col-sm-8">
+                        <input
+                            type="text"
+                            class="form-control o_website_form_input"
+                            name="ypos"
+                            t-att-value="default_ypos"
+                        />
+                    </div>
+                </div>
+                    <div class="form-group">
+                    <div class="col-md-offset-3 col-sm-offset-4 col-sm-8 col-md-7">
+                        <button class="btn btn-primary btn-lg">Add Item</button>
+                    </div>
+                </div>
+                </form>
+            </div>
+        </section>
+    </template>
+    <!-- Add snippets to menu -->
+    <template id="snippet_effect" inherit_id="website.snippets">
+        <xpath expr="//div[@id='snippet_effect']/div[hasclass('o_panel_body')]" position="inside">
+            <t
+                t-snippet="demo_website_snippet_defi.s_demo_website_snippet_defi"
+                t-thumbnail="/demo_website_snippet_defi/static/description/icon.png"
+            />
+        </xpath>
+    </template>
+    <!-- Add stylesheet and Javascript -->
+    <template id="assets_frontend" inherit_id="website.assets_frontend">
+        <xpath expr="//link[last()]" position="after">
+            <link
+                rel="stylesheet"
+                type="text/scss"
+                href="/demo_website_snippet_defi/static/src/scss/demo_website_snippet_defi.scss"
+            />
+        </xpath>
+        <xpath expr="//script[last()]" position="after">
+            <script
+                type="text/javascript"
+                src="/demo_website_snippet_defi/static/src/js/website.demo_website_snippet_defi.animation.js"
+            />
+        </xpath>
+    </template>
+</odoo>

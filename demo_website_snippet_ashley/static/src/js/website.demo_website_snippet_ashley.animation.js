@@ -20,10 +20,9 @@ odoo.define("demo_website_snippet_ashley.animation", function (require) {
                 if (_.isEmpty(data)) {
                     return;
                 }
-
                 console.error("error!");
                 self._$loadedContent = $(data);
-                self._eventList.text(data["fruit"].join("<br1>"));
+                self._eventList.html(data["fruit"].join("<br/>"));
             });
 
             return $.when(this._super.apply(this, arguments), def);

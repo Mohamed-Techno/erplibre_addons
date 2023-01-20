@@ -1,5 +1,5 @@
 {
-    "name": "Website Aliments",
+    "name": "Demo Website Snippet defi",
     "category": "Website",
     "version": "12.0.1.0",
     "author": "TechnoLibre",

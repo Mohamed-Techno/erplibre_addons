@@ -1,20 +1,20 @@
+import json
+
+import werkzeug
+
 from odoo import http, models, fields, api
 from odoo.http import request
-
-import json
-import werkzeug
 
 
 class DemoWebsiteSnippetController(http.Controller):
     @http.route(
-        ["/demo_website_snippet_ashley/helloworld"],
+        ["/demo_website_snippet_defi/helloworld"],
         type="json",
         auth="public",
         website=True,
         methods=["POST", "GET"],
         csrf=False,
     )
-    # Ajout des fruits du demo_internal
     def hello_world(self):
         result_ids = request.env["demo.model.internal"].search([])
         lst_fruit = []
@@ -22,9 +22,8 @@ class DemoWebsiteSnippetController(http.Controller):
         for result_id in result_ids:
             lst_fruit.append(result_id.name)
         return data
-
     @http.route(
-        "/demo_website_snippet_ashley/add",
+        "/demo_website_snippet_defi/add",
         type="http",
         auth="user",
         website=True,

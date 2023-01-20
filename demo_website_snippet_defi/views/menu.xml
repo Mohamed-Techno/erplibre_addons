@@ -4,7 +4,7 @@
 
     <menuitem
         id="demo_internal"
-        name="Demo Internal"
+        name="Shopping List"
         sequence="20"
         web_icon="demo_internal,static/description/icon.png"
     />
@@ -17,7 +17,7 @@
 
     <menuitem
         id="demo_model_internal"
-        name="Demo model internal"
+        name="Shopping List"
         action="demo_model_internal_demo_model_internal_action_window"
         sequence="2"
         parent="menu"
