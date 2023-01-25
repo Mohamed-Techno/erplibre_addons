@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <!--Root menu-->
+
+    <menuitem
+        id="defi_aliment_icon"
+        name="Defi Aliment"
+        sequence="20"
+        web_icon="defi_aliment_ashley,static/description/icon.png"
+    />
+
+    <!--Sub menu-->
+
+    <menuitem id="defi_aliment_menu" name="Defi Aliment Menu" sequence="1" parent="defi_aliment_icon" />
+
+    <!--Child menu-->
+
+    <menuitem
+        id="defi_aliment"
+        name="Defi Aliment"
+        action="defi_aliment_defi_aliment_action_window"
+        sequence="2"
+        parent="defi_aliment_menu"
+    />
+</odoo>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record id="defi_aliment_view_form" model="ir.ui.view">
+        <field name="name">defi_aliment_form</field>
+        <field name="model">defi.aliment</field>
+        <field name="arch" type="xml">
+            <form string="Titre">
+                <sheet>
+                    <group>
+                        <field name="name" />
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="defi_aliment_view_tree" model="ir.ui.view">
+        <field name="name">defi_aliment_tree</field>
+        <field name="model">defi.aliment</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name" />
+            </tree>
+        </field>
+    </record>
+
+    <act_window
+        id="defi_aliment_defi_aliment_action_window"
+        name="Defi Aliments"
+        res_model="defi.aliment"
+        view_mode="tree,form"
+    />
+</odoo>
