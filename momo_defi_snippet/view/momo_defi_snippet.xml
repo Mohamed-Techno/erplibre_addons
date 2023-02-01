@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record id="defi_snippet_view_form" model="ir.ui.view">
+        <field name="name">defi_snippet_form</field>
+        <field name="model">defi.snip</field>
+        <field name="arch" type="xml">
+            <form string="Titre">
+                <sheet>
+                    <group>
+                        <field name="name" />
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="defi_snippet_view_tree" model="ir.ui.view">
+        <field name="name">defi_snippet_tree</field>
+        <field name="model">defi.snip</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name" />
+            </tree>
+        </field>
+    </record>
+
+    <act_window
+        id="defi_snippet_action_windows"<!--defi_aliment_defi_aliment_action_window-->
+        name="Defi Snippet"
+        res_model="defi.snip"
+        view_mode="tree,form"
+    />
+</odoo>

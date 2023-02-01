@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <!--Root menu-->
+
+    <menuitem
+        id="snippet_icon"
+        name="Snippet item"
+        sequence="20"
+        web_icon="momo_defi_snippet/static/image/momo_snip.png"
+    />
+
+    <!--Sub menu-->
+
+    <menuitem id="snippet_menu" name="Snippet Menu" sequence="1" parent="snippet_icon" />
+
+    <!--Child menu-->
+
+    <menuitem
+        id="snippet_aliment"
+        name="Snippet item"
+        action="defi_aliment_defi_aliment_action_window"
+        sequence="2"
+        parent="snippet_menu"
+    />
+</odoo>

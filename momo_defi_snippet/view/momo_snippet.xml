@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <template id="snippet_momo" name="snippet_defi_momo">
+        <section class="dei_momo_snippet">
+            <div class="container">
+                <div class=""></div>
+                <form
+                    action = "/momo_defi_snippet/ajoutElement"
+                    methode = "POST"
+                    class = ""
+
+                >
+                    <div class="">
+                        <label class="" for=""></label>
+                        <div>
+                            <input
+                                type=""
+                                class=""
+                                name=""
+                            />
+                        </div>
+                    </div>
+                    <div class="">
+                        <div>
+                            <button>ADD</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </template>
+
+    <!-- Add the snippet in the menu of all snipets -->
+    <template id="snip" inherit_id="website.snippets">
+        <xpath expr="//div[@id='snip']/div[hasclass('o_panel_body')]" position="inside">
+            <t
+                snippet="momo_defi_snippet.snippet"
+                thumbnail="/momo_defi_snippet/static/image/momo_snip.png"
+            />
+        </xpath>
+    </template>
+
+    <!-- link javascript and css -->
+    <template id="assets_frontend" inherit_id="website.assets_frontend">
+
+        <xpath expr="//script[last()]" position="after">
+            <script
+                type="text/javascript"
+                src="/momo_defi_snippet/static/backend/momo_defi_snippet.js"
+            />
+        </xpath>
+
+    </template>
+
+
+
+</odoo>
