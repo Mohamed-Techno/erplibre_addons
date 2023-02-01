@@ -1,12 +1,13 @@
 from odoo.odoo import http
 import requests
-
 from odoo.odoo.http import request
+import json
+import werkzeug
 
 
 class DefiSnippet(http.Controller):
     @http.route(
-        ["/momo_defi_snippet/momo_defi_snippet"],
+        ["/momo_defi_snippet/defi_aliment"],
         Type="json",
         auth="public",
         website=True,
@@ -15,7 +16,7 @@ class DefiSnippet(http.Controller):
     )
     # le client inscrit un fruit et cette methode a prend ce que le client a ecrit
     # et l'ajoute  dans la lsite necessaire
-    def defi_snip(self):
+    def defi_aliment(self):
         aliments = requests.env["defi.snip"].search([])
         aliments_list = []
         data = {"fruits": aliments_list}
@@ -23,8 +24,9 @@ class DefiSnippet(http.Controller):
             aliments_list.append(element.name)
         return data
 
+
     @http.route(
-        "/momo_defi_snippet/add",
+        "/momo_defi_snippet/ajoutElement",
         type="http",
         auth="user",
         website=True,

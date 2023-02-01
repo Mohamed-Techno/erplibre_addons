@@ -1,28 +1,30 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <odoo>
-    <template id="snippet_momo" name="snippet_defi_momo">
-        <section class="dei_momo_snippet">
+    <!--snippet-->
+    <template id="s_momo_defi_snippet" name="Momo Defi Snippet">
+        <section class="o_momo_defi_snippet">
             <div class="container">
-                <div class=""></div>
+                <div class="text-center momo_defi_snippet_value">Snippet</div>
                 <form
-                    action = "/momo_defi_snippet/ajoutElement"
-                    methode = "POST"
-                    class = ""
-
+                    action="/momo_defi_snippet/ajoutElement"
+                    methode="POST"
+                    class="form-horizontal mt32"
+                    enctype="multipart/from-data"
                 >
-                    <div class="">
-                        <label class="" for=""></label>
-                        <div>
+                    <div class="form-group">
+                        <label class="col-md-3 col-sm-4 control-label" for="ypos">Inscrivez un fruit</label>
+                        <div class="col-md-7 col-sm-8">
                             <input
-                                type=""
-                                class=""
-                                name=""
+                                type="text"
+                                class="form-control o_website_form_input"
+                                name="ypos"
+                                t-att-value="default_ypos"
                             />
                         </div>
                     </div>
-                    <div class="">
-                        <div>
-                            <button>ADD</button>
+                    <div class="form-group">
+                        <div  class="col-md-offset-3 col-sm-offset-4 col-md-8 col-sm-7">
+                            <button class="btn btn-primary btn-lg">ADD</button>
                         </div>
                     </div>
                 </form>
@@ -31,18 +33,24 @@
     </template>
 
     <!-- Add the snippet in the menu of all snipets -->
-    <template id="snip" inherit_id="website.snippets">
-        <xpath expr="//div[@id='snip']/div[hasclass('o_panel_body')]" position="inside">
+    <template id="snippet_momo" inherit_id="website.snippets">
+        <xpath expr="//div[@id='snippet_momo']/div[hasclass('o_panel_body')]" position="inside">
             <t
-                snippet="momo_defi_snippet.snippet"
-                thumbnail="/momo_defi_snippet/static/image/momo_snip.png"
+                t-snippet="momo_defi_snippet.s_momo_defi_snippet"
+                t-thumbnail="/momo_defi_snippet/static/description/icon.png"
             />
         </xpath>
     </template>
 
     <!-- link javascript and css -->
     <template id="assets_frontend" inherit_id="website.assets_frontend">
-
+        <xpath expr="//link[last()]" position="after">
+            <link
+                rel="stylesheet"
+                type="text/scss"
+                href="/momo_def_snippet/static/src/scss/momo_defi_snippet.scss"
+            />
+        </xpath>
         <xpath expr="//script[last()]" position="after">
             <script
                 type="text/javascript"
