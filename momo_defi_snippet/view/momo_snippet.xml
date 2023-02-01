@@ -33,8 +33,8 @@
     </template>
 
     <!-- Add the snippet in the menu of all snipets -->
-    <template id="snippet_momo" inherit_id="website.snippets">
-        <xpath expr="//div[@id='snippet_momo']/div[hasclass('o_panel_body')]" position="inside">
+    <template id="snippet_effect" inherit_id="website.snippets">
+        <xpath expr="//div[@id='snippet_effect']/div[hasclass('o_panel_body')]" position="inside">
             <t
                 t-snippet="momo_defi_snippet.s_momo_defi_snippet"
                 t-thumbnail="/momo_defi_snippet/static/description/icon.png"

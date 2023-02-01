@@ -1,6 +1,5 @@
-from odoo.odoo import http
-import requests
-from odoo.odoo.http import request
+from odoo import http
+from odoo.http import request
 import json
 import werkzeug
 
@@ -17,7 +16,7 @@ class DefiSnippet(http.Controller):
     # le client inscrit un fruit et cette methode a prend ce que le client a ecrit
     # et l'ajoute  dans la lsite necessaire
     def defi_aliment(self):
-        aliments = requests.env["defi.snip"].search([])
+        aliments = request.env["defi.snip"].search([])
         aliments_list = []
         data = {"fruits": aliments_list}
         for element in aliments:

@@ -18,8 +18,8 @@
     <menuitem
         id="snippet_aliment"
         name="Snippet item"
-        action="defi_aliment_defi_aliment_action_window"
+        action="defi_snippet_action_windows"
         sequence="2"
-        parent="snippet_menu"
+        parent="menu_snippet"
     />
 </odoo>

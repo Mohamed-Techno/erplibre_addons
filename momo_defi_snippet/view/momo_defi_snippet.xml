@@ -23,9 +23,9 @@
             </tree>
         </field>
     </record>
-
+<!--defi_aliment_defi_aliment_action_window-->
     <act_window
-        id="defi_snippet_action_windows"<!--defi_aliment_defi_aliment_action_window-->
+        id="defi_snippet_action_windows"
         name="Defi Snippet"
         res_model="defi.snip"
         view_mode="tree,form"
