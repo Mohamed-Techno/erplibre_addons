@@ -16,7 +16,7 @@ class DefiSnippet(http.Controller):
     # le client inscrit un fruit et cette methode a prend ce que le client a ecrit
     # et l'ajoute  dans la lsite necessaire
     def defi_snip(self):
-        aliments = requests.env["defi.snip"].searchc([])
+        aliments = requests.env["defi.snip"].search([])
         aliments_list = []
         data = {"fruits": aliments_list}
         for element in aliments:
@@ -31,13 +31,13 @@ class DefiSnippet(http.Controller):
         methods=["POST"],
         csrf=False,
     )
-    def submit_defi_aliment_portal(self, **kw):
-        vals = {}
+    def defi_snip_portal(self, **kw):
+        name_values = {}
 
         if kw.get("ypos"):
             ypos_value = kw.get("ypos")
-            vals["name"] = str(ypos_value)
+            name_values["name"] = str(ypos_value)
 
-        new_defi_aliment_portal = (
-            request.env["defi.snip"].sudo().create(vals)
+        new_defi_snip = (
+            request.env["defi.snip"].sudo().create(name_values)
         )
