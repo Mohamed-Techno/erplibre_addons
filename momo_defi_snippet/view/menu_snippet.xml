@@ -20,6 +20,6 @@
         name="Snippet item"
         action="defi_snippet_action_windows"
         sequence="2"
-        parent="menu_snippet"
+        parent="snippet_menu"
     />
 </odoo>

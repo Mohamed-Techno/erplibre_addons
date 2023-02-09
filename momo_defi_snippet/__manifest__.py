@@ -11,9 +11,10 @@
     "application": False,
     "depends": ["website"],
     "data": [
+        "security/ir.model.access.csv",
         "view/momo_snippet.xml",
-        "view/menu_snippet.xml",
         "view/momo_defi_snippet.xml",
+        "view/menu_snippet.xml",
     ],
     "installable": True,
 }

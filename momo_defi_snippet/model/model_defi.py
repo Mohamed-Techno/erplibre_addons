@@ -1,9 +1,8 @@
-from odoo.odoo import fields
-from odoo.odoo.service import model
+from odoo import _, api, fields, models
 
 
-class DefiSnippet(model.Model):
-    _nom = ""
-    _desc = ""
+class DefiSnippet(models.Model):
+    _name = "defi.snip"
+    _description = "patate"
 
-    nom = fields.Char()
+    name = fields.Char()

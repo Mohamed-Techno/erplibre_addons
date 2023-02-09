@@ -25,7 +25,7 @@ class DefiSnippet(http.Controller):
 
 
     @http.route(
-        "/momo_defi_snippet/ajoutElement",
+        "/momo_defi_snippet/add_aliment",
         type="http",
         auth="user",
         website=True,

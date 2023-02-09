@@ -4,9 +4,9 @@
     <template id="s_momo_defi_snippet" name="Momo Defi Snippet">
         <section class="o_momo_defi_snippet">
             <div class="container">
-                <div class="text-center momo_defi_snippet_value">Snippet</div>
+                <div class="text-center momo_defi_snippet_value">Momo hahhaah Snippet</div>
                 <form
-                    action="/momo_defi_snippet/ajoutElement"
+                    action="/momo_defi_snippet/add_aliment"
                     methode="POST"
                     class="form-horizontal mt32"
                     enctype="multipart/from-data"
@@ -48,7 +48,7 @@
             <link
                 rel="stylesheet"
                 type="text/scss"
-                href="/momo_def_snippet/static/src/scss/momo_defi_snippet.scss"
+                href="/momo_defi_snippet/static/src/scss/momo_defi_snippet.scss"
             />
         </xpath>
         <xpath expr="//script[last()]" position="after">
